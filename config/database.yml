@@ -1,0 +1,23 @@
+
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  # For details on connection pooling, see Rails configuration guide
+  # https://guides.rubyonrails.org/configuring.html#database-pooling
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: gallery_db_development
+
+test:
+  <<: *default
+  database: gallery_db_test
+
+
+#
+production:
+  <<: *default
+  database: gallery_db_production
+  username: gallery_db
+  password: <%= ENV["GALLERY_DB_DATABASE_PASSWORD"] %>
