@@ -18,7 +18,6 @@ gem 'ruby-vips'
 gem 'mini_mime'
 gem 'sass-rails', '>= 5.0'
 gem 'sprockets-rails'
-gem 'sassc-rails' # if you're using Sass
 
 
 
