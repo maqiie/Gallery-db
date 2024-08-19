@@ -24,7 +24,7 @@ module GalleryDb
     # CORS configuration
     config.middleware.insert_before 0, Rack::Cors do
       allow do
-        origins 'https://ujenziandpaints.vercel.app','https://gallery-558aowngy-maqiies-projects.vercel.app', 'https://gallery-git-main-maqiies-projects.vercel.app'
+        origins 'https://ujenziandpaints.vercel.app', 'https://gallery-558aowngy-maqiies-projects.vercel.app', 'https://gallery-git-main-maqiies-projects.vercel.app', 'https://gallery-1f80dg56b-maqiies-projects.vercel.app'
         resource '*',
           headers: :any,
           expose: ['access-token', 'expiry', 'token-type', 'uid', 'client'],
