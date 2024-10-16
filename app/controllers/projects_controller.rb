@@ -67,14 +67,17 @@ class ProjectsController < ApplicationController
 
   # POST /projects/:id/add_media
   def add_media
-    if params[:images].present?
-      attach_media
-      render json: { success: "Media added successfully" }, status: :ok
+    @project = Project.find(params[:id])
+
+    if params[:media].present?
+      params[:media].each do |media_file|
+        @project.media.attach(media_file) # Attach each media file
+      end
+      render json: { message: 'Media uploaded successfully' }, status: :created
     else
-      render json: { error: "No media provided" }, status: :unprocessable_entity
+      render json: { error: 'No media files provided' }, status: :unprocessable_entity
     end
   end
-
   # DELETE /projects/:id/remove_media/:media_id
   def remove_media
     media = @project.images.find_by(id: params[:media_id])
