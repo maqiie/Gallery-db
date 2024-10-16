@@ -22,17 +22,30 @@ module GalleryDb
     config.middleware.use ActionDispatch::Flash
 
     # CORS configuration
+    # config.middleware.insert_before 0, Rack::Cors do
+    #   allow do
+    #     origins 'http://localhost:3000', 
+    #     'https://gallery-17bt.vercel.app', 
+    #     'https://ujenzi-gallegry-75de7aa1ebe9.herokuapp.com', 
+        
+    #     resource '*',
+    #       headers: :any,
+    #       expose: ['access-token', 'expiry', 'token-type', 'uid', 'client'],
+    #       methods: [:get, :post, :options, :delete, :put, :patch]
+    #   end
+    # end
     config.middleware.insert_before 0, Rack::Cors do
       allow do
         origins 'http://localhost:3000', 
-        'https://gallery-17bt.vercel.app', 
-        'https://ujenzi-gallegry-75de7aa1ebe9.herokuapp.com', 
-        
+                'https://gallery-17bt.vercel.app',
+                'https://ujenzi-gallegry-75de7aa1ebe9.herokuapp.com' 
+    
         resource '*',
           headers: :any,
           expose: ['access-token', 'expiry', 'token-type', 'uid', 'client'],
           methods: [:get, :post, :options, :delete, :put, :patch]
       end
     end
+    
   end
 end
