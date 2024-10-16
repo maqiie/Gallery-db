@@ -1,27 +1,3 @@
-
-# default: &default
-#   adapter: postgresql
-#   encoding: unicode
-#   # For details on connection pooling, see Rails configuration guide
-#   # https://guides.rubyonrails.org/configuring.html#database-pooling
-#   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-
-# development:
-#   <<: *default
-#   database: gallery_db_development
-
-# test:
-#   <<: *default
-#   database: gallery_db_test
-
-
-# #
-# production:
-#   <<: *default
-#   database: gallery_db_production
-#   username: gallery_db
-#   password: <%= ENV["GALLERY_DB_DATABASE_PASSWORD"] %>
-
 default: &default
   adapter: postgresql
   encoding: unicode
@@ -29,12 +5,24 @@ default: &default
 
 development:
   <<: *default
-  url: postgresql://postgres:GQXLNNQOguYKVcpicsjVvEdFNwszIOoF@junction.proxy.rlwy.net:35764/railway
+  database: gallery_db_development
+  username: u56kglvratf8f8          # Use your development username
+  password: paf77b51b25aa245485bf4505fffad3946828664bdaa50d68c53f93bf2351e79e  # Use your development password
+  host: cat670aihdrkt1.cluster-czrs8kj4isg7.us-east-1.rds.amazonaws.com
+  port: 5432
 
 test:
   <<: *default
   database: gallery_db_test
+  username: u56kglvratf8f8          # Use your test username
+  password: paf77b51b25aa245485bf4505fffad3946828664bdaa50d68c53f93bf2351e79e  # Use your test password
+  host: cat670aihdrkt1.cluster-czrs8kj4isg7.us-east-1.rds.amazonaws.com
+  port: 5432
 
 production:
   <<: *default
-  url: postgresql://postgres:GQXLNNQOguYKVcpicsjVvEdFNwszIOoF@junction.proxy.rlwy.net:35764/railway
+  database: d9ivb8eimfog4a          # Your production database name
+  username: u56kglvratf8f8          # Production username
+  password: paf77b51b25aa245485bf4505fffad3946828664bdaa50d68c53f93bf2351e79e  # Production password
+  host: cat670aihdrkt1.cluster-czrs8kj4isg7.us-east-1.rds.amazonaws.com
+  port: 5432
