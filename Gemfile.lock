@@ -236,6 +236,7 @@ DEPENDENCIES
   rails (~> 7.0.8, >= 7.0.8.4)
   ruby-vips
   sass-rails (>= 5.0)
+  sprockets-rails (~> 3.0)
   tzinfo-data
 
 RUBY VERSION
