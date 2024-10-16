@@ -19,7 +19,7 @@ gem 'active_storage_validations'
 gem 'ruby-vips'
 gem 'mini_mime'
 gem 'sass-rails', '>= 5.0'
-gem 'sprockets-rails'
+# gem 'sprockets-rails'
 
 
 
