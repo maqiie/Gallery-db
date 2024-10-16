@@ -25,10 +25,9 @@ module GalleryDb
     config.middleware.insert_before 0, Rack::Cors do
       allow do
         origins 'http://localhost:3000', 
-        'https://ujenziandpaints.vercel.app', 
+        'https://gallery-17bt.vercel.app', 
         'https://ujenzi-gallegry-75de7aa1ebe9.herokuapp.com', 
-        'https://gallery-git-main-maqiies-projects.vercel.app', 
-        'https://gallery-1f80dg56b-maqiies-projects.vercel.app'
+        
         resource '*',
           headers: :any,
           expose: ['access-token', 'expiry', 'token-type', 'uid', 'client'],
