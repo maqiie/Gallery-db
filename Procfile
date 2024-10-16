@@ -1,1 +1,1 @@
-web: bundle exec rails server -b 0.0.0.0 -p $PORT
+web: bundle install --without development test && rails db:create && rails db:migrate && rails server

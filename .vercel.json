@@ -6,6 +6,10 @@
         "use": "@vercel/ruby"
       }
     ],
+    "env": {
+      "DATABASE_URL": "postgresql://postgres:GQXLNNQOguYKVcpicsjVvEdFNwszIOoF@junction.proxy.rlwy.net:35764/railway",
+      "RAILS_ENV": "production"
+    },
     "routes": [
       {
         "src": "/(.*)",
