@@ -39,7 +39,7 @@ module GalleryDb
         origins 'http://localhost:3000', 
                 'https://gallery-17bt.vercel.app'
     
-        resource '/projects', # Limit to specific endpoint if possible
+        resource '*', # Limit to specific endpoint if possible
           headers: :any,
           expose: ['access-token', 'expiry', 'token-type', 'uid', 'client'],
           methods: [:get, :post, :options, :delete, :put, :patch]
