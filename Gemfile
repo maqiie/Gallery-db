@@ -21,6 +21,10 @@ gem 'mini_mime'
 gem 'sass-rails', '>= 5.0'
 gem 'sprockets-rails', '~> 3.0'
 
+gem 'ostruct'
+gem 'base64'
+gem 'bigdecimal'
+gem 'mutex_m'
 
 
 
