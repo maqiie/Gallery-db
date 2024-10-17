@@ -25,6 +25,7 @@ gem 'ostruct'
 gem 'base64'
 gem 'bigdecimal'
 gem 'mutex_m'
+gem 'dotenv-rails', groups: [:development, :test, :production]
 
 
 

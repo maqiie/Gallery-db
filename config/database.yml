@@ -30,21 +30,21 @@
 default: &default
   adapter: postgresql
   encoding: unicode
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 10 } %> # Increased pool size
   timeout: 5000
 
 development:
   <<: *default
   database: gallery-db
   username: markpaul
-  password: markpaul # Set your PostgreSQL password here
+  password: markpaul
   host: localhost
 
 test:
   <<: *default
   database: gallery-db
   username: markpaul
-  password: markpaul # Set your PostgreSQL password here
+  password: markpaul
   host: localhost
 
 production:
