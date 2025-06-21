@@ -27,22 +27,45 @@
 #   host: cat670aihdrkt1.cluster-czrs8kj4isg7.us-east-1.rds.amazonaws.com
 #   port: 5432
 
+# default: &default
+#   adapter: postgresql
+#   encoding: unicode
+#   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 10 } %> # Increased pool size
+#   timeout: 5000
+
+# development:
+#   <<: *default
+#   database: gallery-db
+#   username: markpaul
+#   password: markpaul
+#   host: localhost
+
+# test:
+#   <<: *default
+#   database: gallery-db
+#   username: markpaul
+#   password: markpaul
+#   host: localhost
+
+# production:
+#   <<: *default
+#   url: <%= ENV['DATABASE_URL'] %>
 default: &default
   adapter: postgresql
   encoding: unicode
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 10 } %> # Increased pool size
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 10 } %>
   timeout: 5000
 
 development:
   <<: *default
-  database: gallery-db
+  database: gallery_db_development
   username: markpaul
   password: markpaul
   host: localhost
 
 test:
   <<: *default
-  database: gallery-db
+  database: gallery_db_test
   username: markpaul
   password: markpaul
   host: localhost
