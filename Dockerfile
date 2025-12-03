@@ -1,12 +1,15 @@
-FROM ruby:3.3.5-slim-bullseye
+# ==== Base Image ====
+FROM ruby:3.3.5-slim-bookworm
 
-ENV RAILS_ENV=production \
-    RACK_ENV=production \
-    BUNDLER_VERSION=2.5.21 \
-    LANG=C.UTF-8 \
-    TZ=Africa/Nairobi
+# ==== Environment Setup ====
+ENV LANG=C.UTF-8 \
+    RAILS_ENV=production \
+    NODE_ENV=production \
+    BUNDLE_JOBS=4 \
+    BUNDLE_PATH=/usr/local/bundle \
+    BUNDLE_WITHOUT="development test"
 
-# Install system dependencies including libssl3
+# ==== Install Dependencies ====
 RUN apt-get update -qq && \
     apt-get install -y --no-install-recommends \
       build-essential \
@@ -22,19 +25,24 @@ RUN apt-get update -qq && \
       libssl3 && \
     apt-get clean && rm -rf /var/lib/apt/lists/*
 
-RUN gem install bundler -v $BUNDLER_VERSION
+# ==== Install Bundler ====
+RUN gem install bundler -v 2.5.21
 
+# ==== Set Workdir ====
 WORKDIR /app
 
+# ==== Copy Gemfiles & Install Gems ====
 COPY Gemfile Gemfile.lock ./
-RUN bundle config set deployment 'true' && \
-    bundle install --jobs 4 --retry 3 --without development test
+RUN bundle install --jobs 4 --retry 3
 
+# ==== Copy the App ====
 COPY . .
 
-# Precompile assets
+# ==== Precompile Assets ====
 RUN bin/rails assets:precompile
 
-EXPOSE 3000
+# ==== Expose Port ====
+EXPOSE 8080
 
-CMD ["bin/rails", "server", "-b", "0.0.0.0", "-p", "3000"]
+# ==== Start Command ====
+CMD ["bin/rails", "server", "-b", "0.0.0.0", "-p", "8080"]
