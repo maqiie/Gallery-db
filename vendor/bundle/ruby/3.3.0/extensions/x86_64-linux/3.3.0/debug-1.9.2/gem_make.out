@@ -1,0 +1,19 @@
+current directory: /home/markpaul/projects/Gallery/Gallery-db/vendor/bundle/ruby/3.3.0/gems/debug-1.9.2/ext/debug
+/home/markpaul/.rbenv/versions/3.3.5/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /home/markpaul/projects/Gallery/Gallery-db/vendor/bundle/ruby/3.3.0/gems/debug-1.9.2/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20251203-98562-a7p3wt sitelibdir\=./.gem.20251203-98562-a7p3wt clean
+
+current directory: /home/markpaul/projects/Gallery/Gallery-db/vendor/bundle/ruby/3.3.0/gems/debug-1.9.2/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20251203-98562-a7p3wt sitelibdir\=./.gem.20251203-98562-a7p3wt
+compiling debug.c
+compiling iseq_collector.c
+linking shared-object debug/debug.so
+
+current directory: /home/markpaul/projects/Gallery/Gallery-db/vendor/bundle/ruby/3.3.0/gems/debug-1.9.2/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20251203-98562-a7p3wt sitelibdir\=./.gem.20251203-98562-a7p3wt install
+/usr/bin/install -c -m 0755 debug.so ./.gem.20251203-98562-a7p3wt/debug
+
+current directory: /home/markpaul/projects/Gallery/Gallery-db/vendor/bundle/ruby/3.3.0/gems/debug-1.9.2/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20251203-98562-a7p3wt sitelibdir\=./.gem.20251203-98562-a7p3wt clean

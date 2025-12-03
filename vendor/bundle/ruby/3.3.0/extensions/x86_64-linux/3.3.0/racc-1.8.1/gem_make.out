@@ -1,0 +1,18 @@
+current directory: /home/markpaul/projects/Gallery/Gallery-db/vendor/bundle/ruby/3.3.0/gems/racc-1.8.1/ext/racc/cparse
+/home/markpaul/.rbenv/versions/3.3.5/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /home/markpaul/projects/Gallery/Gallery-db/vendor/bundle/ruby/3.3.0/gems/racc-1.8.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20251203-98562-lqz7da sitelibdir\=./.gem.20251203-98562-lqz7da clean
+
+current directory: /home/markpaul/projects/Gallery/Gallery-db/vendor/bundle/ruby/3.3.0/gems/racc-1.8.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20251203-98562-lqz7da sitelibdir\=./.gem.20251203-98562-lqz7da
+compiling cparse.c
+linking shared-object racc/cparse.so
+
+current directory: /home/markpaul/projects/Gallery/Gallery-db/vendor/bundle/ruby/3.3.0/gems/racc-1.8.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20251203-98562-lqz7da sitelibdir\=./.gem.20251203-98562-lqz7da install
+/usr/bin/install -c -m 0755 cparse.so ./.gem.20251203-98562-lqz7da/racc
+
+current directory: /home/markpaul/projects/Gallery/Gallery-db/vendor/bundle/ruby/3.3.0/gems/racc-1.8.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20251203-98562-lqz7da sitelibdir\=./.gem.20251203-98562-lqz7da clean
