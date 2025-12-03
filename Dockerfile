@@ -1,7 +1,6 @@
 # ==== Base Image ====
 FROM ruby:3.3.5-slim-bookworm
 
-# ==== Environment Setup ====
 ENV LANG=C.UTF-8 \
     RAILS_ENV=production \
     NODE_ENV=production \
