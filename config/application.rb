@@ -36,16 +36,23 @@ module GalleryDb
     # end
     config.middleware.insert_before 0, Rack::Cors do
       allow do
-        origins 'http://localhost:3000', 
-                'https://gallery-17bt.vercel.app',
-                'https://gallery-un7x.vercel.app',
-                'https://ujenzi-gallegry-75de7aa1ebe9.herokuapp.com'
+        origins [
+          'http://192.168.1.191:3000',
+          'http://192.168.1.191:3002',
+          'http://localhost:3000',
+          'http://localhost:3002', 
+          'https://gallery-17bt.vercel.app',
+          'https://gallery-un7x.vercel.app',
+          'https://ujenzi-gallegry-75de7aa1ebe9.herokuapp.com'
+        ]
+    
         resource '*',
           headers: :any,
           expose: ['access-token', 'expiry', 'token-type', 'uid', 'client'],
           methods: [:get, :post, :options, :delete, :put, :patch]
       end
     end
+    
     
     
   end

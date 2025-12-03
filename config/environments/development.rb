@@ -33,7 +33,7 @@ Rails.application.configure do
   config.active_storage.service = :local
   # Set URL options for local disk service
   config.active_storage.routes_prefix = '/rails/active_storage'
-  Rails.application.routes.default_url_options = { host: 'localhost', port: 3001 }
+  Rails.application.routes.default_url_options = { host: '192.168.1.191', port: 3001 }
 
   # Don't care if the mailer can't send.
   config.action_mailer.raise_delivery_errors = false
